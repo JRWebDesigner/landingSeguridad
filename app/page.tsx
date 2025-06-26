@@ -39,14 +39,14 @@ export default function SecurityMonitoringLanding() {
         <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-red-600 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
-          <div className="absolute top-3/4 right-1/4 w-96 h-96 bg-red-800 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-1000"></div>
+          <div className="absolute top-3/4 right-1/4 w-96 h-96 bg-[#ff0000] rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-1000"></div>
         </div>
         {/* Grid Pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(239,68,68,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(239,68,68,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
       </div>
 
      
-      <section className="relative z-10 min-h-screen flex items-center justify-center flex-wrap px-4">
+      <section className="relative z-10 min-h-screen flex items-center justify-center flex-wrap px-2 md:px-4">
         <div className="x-auto text-center mt-10">
           <div
             className="transform transition-all duration-1000 ease-out"
@@ -57,7 +57,7 @@ export default function SecurityMonitoringLanding() {
             </Badge>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              <span className="bg-gradient-to-r from-white via-red-200 to-red-500 bg-clip-text text-transparent animate-gradient">
+              <span className="bg-gradient-to-r from-white via-red-200 to-[#ff0000] bg-clip-text text-transparent animate-gradient">
                 Monitoreo Inteligente
               </span>
               <br />
@@ -71,7 +71,7 @@ export default function SecurityMonitoringLanding() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-8 py-4 text-lg shadow-2xl shadow-red-500/30 hover:shadow-red-500/50 transition-all duration-300 transform hover:scale-105 group"
+                className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-[#ff0000] text-white px-8 py-4 text-lg shadow-2xl shadow-red-500/30 hover:shadow-red-500/50 transition-all duration-300 transform hover:scale-105 group"
               >
                 Comenzar Demo Gratis
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
@@ -97,7 +97,7 @@ export default function SecurityMonitoringLanding() {
             src="./mobile2.png"
             alt='mobile app'
            
-            className="transform transition-all duration-1000 ease-out"
+            className="h-[350px] md:h-auto transform transition-all duration-1000 ease-out"
             style={{ transform: `translateY(${scrollY * 0.1}px)`}}
         /> 
         <div className="absolute top-20 left-10 animate-float">
@@ -111,11 +111,11 @@ export default function SecurityMonitoringLanding() {
         </div>
       </section>
 
-      <section id="características" className="relative z-10 py-20 px-4">
+      <section id="características" className="relative z-10 py-20 px-2 md:px-4">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-white to-red-500 bg-clip-text text-transparent">
+            <h2 className="text-2xl md:text-5xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-white to-[#ff0000] bg-clip-text text-transparent">
                 ¡ESTOS SON LOS ERRORES QUE PONEN EN RIESGO TU OPERACIÓN!
               </span>
             </h2>
@@ -138,7 +138,7 @@ export default function SecurityMonitoringLanding() {
                 icon: MapPin,
                 description:
                   "Posiblemente una de las debilidades que tienes, es la falta de control sobre accesos y entradas.",
-                color: "from-red-700 to-red-800",
+                color: "from-red-700 to-[#ff0000]",
               },
               {
                 icon: Smartphone,
@@ -150,7 +150,7 @@ export default function SecurityMonitoringLanding() {
               {
                 icon: BarChart3,
                 description: "Quizás los supervisores operan a ciegas y sin herramientas tecnológicas apropiadas",
-                color: "from-red-600 to-red-800",
+                color: "from-red-600 to-[#ff0000]",
               },
               {
                 icon: Zap,
@@ -175,7 +175,7 @@ export default function SecurityMonitoringLanding() {
             ))}
           </div>
            <h3 className="text-center text-xl md:text-3xl font-bold mt-20">
-                <span className="bg-gradient-to-r from-white to-red-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-white to-[#ff0000] bg-clip-text text-transparent">
                   La seguridad no se improvisa. Se controla. Se verifica. Se prueba.
                 </span>
            </h3>
@@ -183,23 +183,22 @@ export default function SecurityMonitoringLanding() {
       </section>
 
       {/* Benefits Section */}
-      <section id="beneficios" className="relative z-10 py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
+      <section id="beneficios" className="relative z-10 py-20 md:px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row gap-12 justify-center items-center">
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-white to-red-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-white to-[#ff0000] bg-clip-text text-transparent">
                   Transforma tu Seguridad
                 </span>
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Todo lo que necesitas para tener el control real de toda tu operación de seguridad, es una sola plataforma.
               </p>
-
               <div className="space-y-6">
                 {[
                   "Geolocalización en tiempo real",
-                  "Dashboard para supervisores",
+                  "Dashboard para supervisores       ",
                   "Programación automática de rondas",
                   "Escaneo con evidencia (QR + multimedia)",
                   "Indoor y Outdoor sin límites",
@@ -207,9 +206,9 @@ export default function SecurityMonitoringLanding() {
                   "Control de accesos con evidencia",
                   "Todo desde la nube, sin hardware adicional",
                 ].map((benefit, index) => (
-                  <div key={index} className="flex items-center space-x-3 group">
-                    <CheckCircle className="h-6 w-6 text-red-500 group-hover:scale-110 transition-transform duration-300" />
-                    <span className="text-gray-300 group-hover:text-white transition-colors duration-300">
+                  <div key={index} className="flex items-center gap-3">
+                    <CheckCircle className="h-9 w-9 text-[#ff0000] transition-transform duration-300" />
+                    <span className="text-gray-300 transition-colors duration-300 w-[90%] md:w-auto text-xl md:text-2xl">
                       {benefit}
                     </span>
                   </div>
@@ -217,20 +216,20 @@ export default function SecurityMonitoringLanding() {
               </div>
             </div>
 
-            <div className="relative w-[90%] md:w-[70%]">
-              <div className="bg-gradient-to-r from-red-600/20 to-red-800/20 rounded-2xl p-8 backdrop-blur-sm border border-red-500/20">
+            <div className="relative w-[95%] md:w-[70%]">
+              <div className="bg-gradient-to-r from-red-600/20 to-[#ff0000]/20 rounded-2xl p-4 md:p-8 backdrop-blur-sm border border-red-500/20">
                 <div className="grid grid-cols-2 gap-6">
                   {[
                     { icon: Users, label: "Personal", value: "24/7" },
                     { icon: Shield, label: "Seguridad", value: "100%" },
                     { icon: BarChart3, label: "Eficiencia", value: "+60%" },
-                    { icon: Clock, label: "Tiempo Real", value: "Al instante" },
+                    { icon: Clock, label: "Tiempo Real", value: "Al Instante" },
                   ].map((item, index) => (
                     <div key={index} className="text-center group">
                       <div className="w-16 h-16 mx-auto mb-3 bg-gradient-to-r from-red-500 to-red-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                        <item.icon className="h-8 w-8 text-white" />
+                        <item.icon className="h-10 w-10 text-white" />
                       </div>
-                      <div className="text-2xl font-bold text-red-500 mb-1">{item.value}</div>
+                      <div className="text-sm md:text-2xl font-bold text-red-500 mb-1">{item.value}</div>
                       <div className="text-gray-400 text-sm">{item.label}</div>
                     </div>
                   ))}
@@ -240,11 +239,10 @@ export default function SecurityMonitoringLanding() {
           </div>
         </div>
       </section>
-      
-      <section className="relative z-20 py-20 px-4">
+      <section className="relative z-20 py-20 md:px-4">
         <div className="container mx-auto grid gap-24">
           <div className="flex flex-col md:flex-row items-center justify-around gap-6">
-           <div className=" mx-auto">
+           <div className="mx-auto">
               <h3 className="font-bold text-2xl">
                 Geolocalización en tiempo real
               </h3>
@@ -254,95 +252,95 @@ export default function SecurityMonitoringLanding() {
             </div>
             <img 
               src="./monitoreo.png" 
-              className="w-[55%] shadow-xl shadow-red-500 rounded-2xl" 
+              className="md:w-[55%] shadow-xl shadow-red-500 rounded-2xl" 
             />
           </div>
-          <div className="flex flex-col md:flex-row-reverse justify-around items-center  text-right gap-6">
+          <div className="flex flex-col md:flex-row-reverse justify-around items-center gap-6">
            <div className=" mx-auto">
               <h3 className="font-bold text-2xl mt-8">
                 Dashboard para supervisores
               </h3>
-              <p className="text-gray-400 leading-relaxed">
+              <p className="text-gray-400 leading-relaxed text-justify md:text-right">
                 Solo necesitas un panel visual y profesional para ver todas las rondas: rondas cumplidas, cuales están activos o cual han sido fallidos. El sistema te muestra colores que indican el estado y reportes descargables en segundos. Ya no necesitarás más hojas de Excel, no más llamadas para saber qué pasa.
               </p>
             </div>
-            <img src="./monitoreo2.webp"  className="w-[55%] shadow-xl shadow-red-500 rounded-2xl" />
+            <img src="./monitoreo2.webp"  className="md:w-[55%] shadow-xl shadow-red-500 rounded-2xl" />
           </div>
           <div className="flex flex-col md:flex-row items-center justify-around gap-6">
            <div>
               <h3 className="font-bold text-2xl">
                 Escaneo con evidencia (QR + multimedia)
               </h3>
-              <p className="text-gray-400 leading-relaxed">
+              <p className="text-gray-400 leading-relaxed text-justify md:text-left">
                 Puedes verificar que el guardia ha escaneado en el lugar correcto con QR o TAG. Te permite agregar fotos, audios, firmas digitales o formularios. Cada escaneo es una prueba legal y operativa.
               </p>
             </div>
-            <img src="./qr.png"  className="w-[45%] shadow-xl shadow-red-500 rounded-2xl" />
+            <img src="./qr.png"  className="md:w-[55%] shadow-xl shadow-red-500 rounded-2xl" />
           </div>
-          <div className="flex flex-col md:flex-row-reverse justify-around items-center  text-right gap-6">
+          <div className="flex flex-col md:flex-row-reverse justify-around items-center gap-6">
            <div className=" mx-auto">
               <h3 className="font-bold text-2xl">
                 Indoor y Outdoor sin límites
               </h3>
-              <p className="text-gray-400 leading-relaxed">
+              <p className="text-gray-400 leading-relaxed text-justify md:text-right">
                 Puedes usar GPS para espacios exteriores. Códigos QR + IoT para interiores donde el GPS no llega. Esta solución es ideal para fábricas, hospitales, centros logísticos o edificios corporativos.
               </p>
             </div>
-            <img src="./rondin2.png"  className="w-[55%] shadow-xl shadow-red-500 rounded-2xl" />
+            <img src="./rondin2.png"  className="md:w-[55%] shadow-xl shadow-red-500 rounded-2xl" />
           </div>
           <div className="flex flex-col md:flex-row items-center justify-around gap-6">
            <div>
               <h3 className="font-bold text-2xl">
                 Indoor y Outdoor sin límites
               </h3>
-              <p className="text-gray-400 leading-relaxed">
+              <p className="text-gray-400 leading-relaxed text-justify md:text-left">
                 Puedes usar GPS para espacios exteriores. Códigos QR + IoT para interiores donde el GPS no llega. Esta solución es ideal para fábricas, hospitales, centros logísticos o edificios corporativos.
               </p>
             </div>
-            <img src="./rondin2.png"  className="w-[55%] shadow-xl shadow-red-500 rounded-2xl" />
+            <img src="./rondin2.png"  className="md:w-[55%] shadow-xl shadow-red-500 rounded-2xl" />
           </div>
-          <div className="flex flex-col md:flex-row-reverse justify-around items-center  text-right gap-6">
+          <div className="flex flex-col md:flex-row-reverse justify-around items-center gap-6">
            <div className=" mx-auto">
               <h3 className="font-bold text-2xl">
                 Bitácoras digitales y reportes inteligentes
               </h3>
-              <p className="text-gray-400 leading-relaxed">
+              <p className="text-gray-400 leading-relaxed text-justify md:text-right">
                 Es una solución en el que todo queda registrado. Puedes filtrar por persona, zona, horario o cumplimiento. Puedes exportar evidencias con un clic. Te permite mostrar profesionalismo ante clientes y auditorías.
               </p>
             </div>
-            <img src="./rondin.png"  className="w-[55%] shadow-xl shadow-red-500 rounded-2xl" />
+            <img src="./rondin.png"  className="md:w-[55%] shadow-xl shadow-red-500 rounded-2xl" />
           </div>
           <div className="flex flex-col md:flex-row items-center justify-around gap-6">
-           <div className="w-[50%]">
+           <div className="md:w-[50%]">
               <h3 className="font-bold text-2xl">
                 Control de accesos con evidencia
               </h3>
-              <p className="text-gray-400 leading-relaxed">
+              <p className="text-gray-400 leading-relaxed text-justify md:text-left">
                 Puedes registrar entradas y salidas con fotos de personas, cédulas y vehículos. Las bitácoras estarás seguras en la nube. Podrás acceder fácilmente a la información, pudiendo auditar por 3 años.
               </p>
             </div>
-            <img src="./reportes.png" className="w-[30%] shadow-xl shadow-red-500 rounded-2xl" />
+            <img src="./reportes.png" className="md:w-[30%] shadow-xl shadow-red-500 rounded-2xl" />
           </div>
-          <div className="flex flex-col md:flex-row-reverse justify-around items-center text-right gap-6">
+          <div className="flex flex-col md:flex-row-reverse justify-around items-center gap-6">
            <div className=" mx-auto">
               <h3 className="font-bold text-2xl">
                 Todo desde la nube, sin hardware adicional
               </h3>
-              <p className="text-gray-400 leading-relaxed">
+              <p className="text-gray-400 leading-relaxed text-justify md:text-right">
                 Solo necesitarás un celular Android por guardia desde donde podrás acceder desde <br /> cualquier navegador. La implementación es sumamente rápida, lo que no frenar tu operación.
               </p>
             </div>
-            <img src="./mobile.png" className="w-[35%] drop-shadow-lg drop-shadow-indigo-500 rounded-2xl" />
+            <img src="./mobile.png" className="md:w-[35%] drop-shadow-lg drop-shadow-indigo-500 rounded-2xl" />
           </div>
         </div>
       </section>
       
       {/* Testimonials */}
-      <section id="testimonios" className="relative z-10 py-20 px-4">
+      <section id="testimonios" className="relative z-10 py-20 px-2 md:px-4">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-white to-red-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-white to-[#ff0000] bg-clip-text text-transparent">
                 Lo que Dicen Nuestros Clientes
               </span>
             </h2>
@@ -390,11 +388,11 @@ export default function SecurityMonitoringLanding() {
       </section>
 
       {/* Final CTA */}
-      <section className="relative z-10 py-20 px-4">
-        <div className="container mx-auto text-center">
-          <div className="max-w-4xl mx-auto">
+      <section className="relative z-10 py-20 md:px-4">
+        <div className="container mx-auto">
+          <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-6xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-white via-red-200 to-red-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-white via-red-200 to-[#ff0000] bg-clip-text text-transparent">
                 ¿Listo para Revolucionar tu Seguridad?
               </span>
             </h2>
@@ -402,10 +400,10 @@ export default function SecurityMonitoringLanding() {
               Únete a más de 500 empresas que ya confíaron para proteger lo que más importa. ¡Está en tus manos dar el siguiente paso! La seguridad profesional empieza con decisiones inteligentes.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center md:mb-12">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-12 py-6 text-xl shadow-2xl shadow-red-500/30 hover:shadow-red-500/50 transition-all duration-300 transform hover:scale-105 group"
+                className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-[#ff0000] text-white px-12 py-6 text-sm md:text-xl shadow-2xl shadow-red-500/30 hover:shadow-red-500/50 transition-all duration-300 transform hover:scale-105 group w-[300px] md:w-auto"
               >
                 QUIERO MI DEMO GRATUITA AHORA
                 <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform duration-300" />
@@ -413,13 +411,9 @@ export default function SecurityMonitoringLanding() {
             </div>
             <p className="text-gray-400">(30 días sin compromiso - Implementación inmediata - Resultados desde el primer día)</p>
             
-            <h2 className="text-4xl md:text-5xl font-bold my-14">
-                <span className="bg-gradient-to-r from-white to-red-500 bg-clip-text text-transparent">
-                  Solicita tu Demo Personalizado
-                </span>
-              </h2>
-            <Card className="bg-gray-900/50 border-red-900/20 backdrop-blur-sm hover:bg-gray-900/70 transition-all duration-300 shadow-2xl shadow-red-500/10">
-                <CardContent className="p-8">
+          </div>
+          <Card className="bg-gray-900/50 border-red-900/20 backdrop-blur-sm hover:bg-gray-900/70 transition-all duration-300 shadow-2xl shadow-red-500/10 mt-12 w-full">
+                <CardContent className="p-2">
                   <form className="space-y-6">
                     <div className="space-y-2">
                       <label htmlFor="name" className="text-sm font-medium text-gray-300">
@@ -430,7 +424,7 @@ export default function SecurityMonitoringLanding() {
                         id="name"
                         name="name"
                         required
-                        className="w-full px-4 py-3 bg-black/50 border border-red-900/30 rounded-lg text-white placeholder-gray-500 focus:border-red-500 focus:ring-2 focus:ring-red-500/20 focus:outline-none transition-all duration-300"
+                        className="w-full px-2 md:px-4 py-3 bg-black/50 border border-red-900/30 rounded-lg text-white placeholder-gray-500 focus:border-red-500 focus:ring-2 focus:ring-red-500/20 focus:outline-none transition-all duration-300"
                         placeholder="Ingresa tu nombre completo"
                       />
                     </div>
@@ -444,7 +438,7 @@ export default function SecurityMonitoringLanding() {
                         id="company"
                         name="company"
                         required
-                        className="w-full px-4 py-3 bg-black/50 border border-red-900/30 rounded-lg text-white placeholder-gray-500 focus:border-red-500 focus:ring-2 focus:ring-red-500/20 focus:outline-none transition-all duration-300"
+                        className="w-full px-2 md:px-4 py-3 bg-black/50 border border-red-900/30 rounded-lg text-white placeholder-gray-500 focus:border-red-500 focus:ring-2 focus:ring-red-500/20 focus:outline-none transition-all duration-300"
                         placeholder="Nombre de tu empresa"
                       />
                     </div>
@@ -458,7 +452,7 @@ export default function SecurityMonitoringLanding() {
                         id="contact"
                         name="contact"
                         required
-                        className="w-full px-4 py-3 bg-black/50 border border-red-900/30 rounded-lg text-white placeholder-gray-500 focus:border-red-500 focus:ring-2 focus:ring-red-500/20 focus:outline-none transition-all duration-300"
+                        className="w-full px-2 md:px-4 py-3 bg-black/50 border border-red-900/30 rounded-lg text-white placeholder-gray-500 focus:border-red-500 focus:ring-2 focus:ring-red-500/20 focus:outline-none transition-all duration-300"
                         placeholder="WhatsApp: +12 345 678 90 o email@empresa.com"
                       />
                     </div>
@@ -471,14 +465,14 @@ export default function SecurityMonitoringLanding() {
                         id="message"
                         name="message"
                         rows={4}
-                        className="w-full px-4 py-3 bg-black/50 border border-red-900/30 rounded-lg text-white placeholder-gray-500 focus:border-red-500 focus:ring-2 focus:ring-red-500/20 focus:outline-none transition-all duration-300 resize-none"
+                        className="w-full px-2 md:px-4 py-3 bg-black/50 border border-red-900/30 rounded-lg text-white placeholder-gray-500 focus:border-red-500 focus:ring-2 focus:ring-red-500/20 focus:outline-none transition-all duration-300 resize-none"
                         placeholder="Cuéntanos sobre tus necesidades específicas..."
                       />
                     </div>
 
                     <Button
                       type="submit"
-                      className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white py-4 text-lg shadow-2xl shadow-red-500/30 hover:shadow-red-500/50 transition-all duration-300 transform hover:scale-105 group"
+                      className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-[#ff0000] text-white py-4 text-lg shadow-2xl shadow-red-500/30 hover:shadow-red-500/50 transition-all duration-300 transform hover:scale-105 group"
                     >
                       Solicitar Demo Gratis
                       <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
@@ -486,7 +480,6 @@ export default function SecurityMonitoringLanding() {
                   </form>
                 </CardContent>
               </Card>
-          </div>
         </div>
       </section>
     </div>
