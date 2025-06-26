@@ -257,7 +257,7 @@ export default function SecurityMonitoringLanding() {
           </div>
           <div className="flex flex-col md:flex-row-reverse justify-around items-center gap-6">
            <div className=" mx-auto">
-              <h3 className="font-bold text-2xl mt-8">
+              <h3 className="font-bold text-2xl mt-8 md:text-right">
                 Dashboard para supervisores
               </h3>
               <p className="text-gray-400 leading-relaxed text-justify md:text-right">
@@ -279,7 +279,7 @@ export default function SecurityMonitoringLanding() {
           </div>
           <div className="flex flex-col md:flex-row-reverse justify-around items-center gap-6">
            <div className=" mx-auto">
-              <h3 className="font-bold text-2xl">
+              <h3 className="font-bold text-2xl md:text-right">
                 Indoor y Outdoor sin límites
               </h3>
               <p className="text-gray-400 leading-relaxed text-justify md:text-right">
@@ -291,48 +291,37 @@ export default function SecurityMonitoringLanding() {
           <div className="flex flex-col md:flex-row items-center justify-around gap-6">
            <div>
               <h3 className="font-bold text-2xl">
-                Indoor y Outdoor sin límites
-              </h3>
-              <p className="text-gray-400 leading-relaxed text-justify md:text-left">
-                Puedes usar GPS para espacios exteriores. Códigos QR + IoT para interiores donde el GPS no llega. Esta solución es ideal para fábricas, hospitales, centros logísticos o edificios corporativos.
-              </p>
-            </div>
-            <img src="./rondin2.png"  className="md:w-[55%] shadow-xl shadow-red-500 rounded-2xl" />
-          </div>
-          <div className="flex flex-col md:flex-row-reverse justify-around items-center gap-6">
-           <div className=" mx-auto">
-              <h3 className="font-bold text-2xl">
                 Bitácoras digitales y reportes inteligentes
               </h3>
-              <p className="text-gray-400 leading-relaxed text-justify md:text-right">
+              <p className="text-gray-400 leading-relaxed text-justify md:text-left">
                 Es una solución en el que todo queda registrado. Puedes filtrar por persona, zona, horario o cumplimiento. Puedes exportar evidencias con un clic. Te permite mostrar profesionalismo ante clientes y auditorías.
               </p>
             </div>
             <img src="./rondin.png"  className="md:w-[55%] shadow-xl shadow-red-500 rounded-2xl" />
           </div>
-          <div className="flex flex-col md:flex-row items-center justify-around gap-6">
+          <div className="flex flex-col md:flex-row-reverse justify-around items-center gap-6">
            <div className="md:w-[50%]">
-              <h3 className="font-bold text-2xl">
+              <h3 className="font-bold text-2xl md:text-right">
                 Control de accesos con evidencia
               </h3>
-              <p className="text-gray-400 leading-relaxed text-justify md:text-left">
+              <p className="text-gray-400 leading-relaxed text-justify md:text-right">
                 Puedes registrar entradas y salidas con fotos de personas, cédulas y vehículos. Las bitácoras estarás seguras en la nube. Podrás acceder fácilmente a la información, pudiendo auditar por 3 años.
               </p>
             </div>
-            <img src="./reportes.png" className="md:w-[30%] shadow-xl shadow-red-500 rounded-2xl" />
+            <img src="./reportes.png"  className="md:w-[30%] shadow-xl shadow-red-500 rounded-2xl" />
           </div>
-          <div className="flex flex-col md:flex-row-reverse justify-around items-center gap-6">
-           <div className=" mx-auto">
+          <div className="flex flex-col md:flex-row items-center justify-around gap-6">
+           <div className="md:w-[50%]">
               <h3 className="font-bold text-2xl">
                 Todo desde la nube, sin hardware adicional
               </h3>
-              <p className="text-gray-400 leading-relaxed text-justify md:text-right">
+              <p className="text-gray-400 leading-relaxed text-justify md:text-left">
                 Solo necesitarás un celular Android por guardia desde donde podrás acceder desde <br /> cualquier navegador. La implementación es sumamente rápida, lo que no frenar tu operación.
               </p>
             </div>
-            <img src="./mobile.png" className="md:w-[35%] drop-shadow-lg drop-shadow-indigo-500 rounded-2xl" />
+            <img src="./mobile.png" className="md:w-[30%] shadow-xl shadow-red-500 rounded-2xl" />
           </div>
-        </div>
+         </div>
       </section>
       
       {/* Testimonials */}
@@ -410,9 +399,8 @@ export default function SecurityMonitoringLanding() {
               </Button>
             </div>
             <p className="text-gray-400">(30 días sin compromiso - Implementación inmediata - Resultados desde el primer día)</p>
-            
           </div>
-          <Card className="bg-gray-900/50 border-red-900/20 backdrop-blur-sm hover:bg-gray-900/70 transition-all duration-300 shadow-2xl shadow-red-500/10 mt-12 w-full">
+          <Card className="container md:w-[80%] bg-gray-900/50 border-red-900/20 backdrop-blur-sm hover:bg-gray-900/70 transition-all duration-300 shadow-2xl shadow-red-500/10 mt-12 w-full">
                 <CardContent className="p-2">
                   <form className="space-y-6">
                     <div className="space-y-2">
