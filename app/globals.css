@@ -26,27 +26,29 @@
     --radius: 0.5rem;
   }
 }
+
 @font-face {
   font-family: 'Aileron';
-  src: url('/Aileron/Aileron-Black.oft') format('oft');
-  font-weight: normal;
+  src: url('/Aileron/Aileron-Black.otf') format('opentype'); /* Corregido formato */
+  font-weight: 900; /* Black corresponde a 900 */
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: 'Adam';
-  src: url('/adam/Adam-Bold.ttf') format('ttf');
-  font-weight: normal;
+  src: url('/adam/Adam-Bold.ttf') format('truetype'); /* Corregido formato */
+  font-weight: 700; /* Bold corresponde a 700 */
   font-style: normal;
   font-display: swap;
 }
 
-h1,h2,h3,h4,h5,span{
-  @apply font-Aileron;
+h1, h2, h3, h4, h5, h6 {
+  @apply font-Aileron !important;
 }
 
-p{
-  @apply font-Adam;
+p {
+  @apply font-Adam !important;
 }
 
 @layer utilities {
