@@ -35,11 +35,20 @@
 }
 @font-face {
   font-family: 'Adam';
-  src: url('/Adam/Adam-Bold.ttf') format('ttf');
+  src: url('/adam/Adam-Bold.ttf') format('ttf');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
+
+h1,h2,h3,h4,h5,span{
+  @apply font-Aileron;
+}
+
+p{
+  @apply font-Adam;
+}
+
 @layer utilities {
   .animate-gradient {
     background-size: 200% 200%;
@@ -88,10 +97,4 @@ html {
 body {
   background: #000000;
   color: #ffffff;
-}
-h1,h2,h3,h4,h5,h6{
-  font-family: 'Aileron', sans-serif;
-}
-p{
-  font-family: 'Adam', sans-serif;
 }
