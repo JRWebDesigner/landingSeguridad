@@ -25,9 +25,7 @@
     --ring: 0 84% 60%;
     --radius: 0.5rem;
   }
-}
-
-@font-face {
+  @font-face {
   font-family: 'Aileron';
   src: url('/Aileron/Aileron-Black.otf') format('opentype'); /* Corregido formato */
   font-weight: 900; /* Black corresponde a 900 */
@@ -50,6 +48,9 @@ h1, h2, h3, h4, h5, h6 {
 p {
   @apply font-Adam !important;
 }
+}
+
+
 
 @layer utilities {
   .animate-gradient {
