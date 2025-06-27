@@ -2,10 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
+@font-face {
+  font-family: 'Aileron';
+  src: url('/Aileron/Aileron-Black.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
+@font-face {
+  font-family: 'Adam';
+  src: url('/adam/Adam-Bold.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+h1,h2,h3,h4,h5{
+  @apply font-Aileron;
+}
+
+p{
+  @apply font-Adam;
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;

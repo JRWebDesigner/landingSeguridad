@@ -45,9 +45,10 @@ export default function SecurityMonitoringLanding() {
         <div className="absolute inset-0 bg-[linear-gradient(rgba(239,68,68,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(239,68,68,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
       </div>
 
-     
-      <section className="relative z-10 min-h-screen flex items-center justify-center flex-wrap px-2 md:px-4">
-        <div className="x-auto text-center mt-10">
+         <img className='relative z-10 mx-auto' src="./logo.png" width='280px'/>
+      <section className="relative z-10 min-h-[80%] flex items-center justify-center flex-wrap px-2 md:px-4">
+
+        <div className="x-auto text-center mt-5">
           <div
             className="transform transition-all duration-1000 ease-out"
             style={{ transform: `translateY(${scrollY * 0.1}px)` }}
