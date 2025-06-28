@@ -471,7 +471,7 @@ export default function SecurityMonitoringLanding() {
               </Card>
         </div>
       </section>
-      <footer className='relative z-10 flex justify-center items-center flex-col my-8 gap-6'>
+      <footer className='relative z-10 flex justify-center items-center flex-col my-8 gap-6 text-center'>
          <img src="./logob.png" width='270px' />
          <span>Copyright © 2025 CORPORACIONROJO, Todos los derechos reservados</span>
       </footer>
