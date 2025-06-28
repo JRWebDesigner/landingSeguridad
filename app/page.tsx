@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -23,6 +23,11 @@ import {
 import Link from "next/link"
 
 export default function SecurityMonitoringLanding() {
+  const formRef = useRef(null);
+
+  const scrollToForm = () => {
+    formRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [scrollY, setScrollY] = useState(0)
 
@@ -31,6 +36,24 @@ export default function SecurityMonitoringLanding() {
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    const handleEsc = (e) => e.key === 'Escape' && setIsOpen(false);
+    if (isOpen) window.addEventListener('keydown', handleEsc);
+    return () => window.removeEventListener('keydown', handleEsc);
+  }, [isOpen]);
+
+
+  useEffect(() => {
+    if (isOpen) document.body.style.overflow = 'hidden';
+    else document.body.style.overflow = 'unset';
+  }, [isOpen]);
+
+  const closeModal = (e) => {
+    if (e.target === e.currentTarget) setIsOpen(false);
+  };
 
   return (
     <div className="min-h-screen bg-black text-white overflow-x-hidden">
@@ -71,6 +94,7 @@ export default function SecurityMonitoringLanding() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <Button
+                onClick={scrollToForm}
                 size="lg"
                 className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-[#ff0000] text-white px-8 py-4 text-lg shadow-2xl shadow-red-500/30 hover:shadow-red-500/50 transition-all duration-300 transform hover:scale-105 group"
               >
@@ -78,6 +102,7 @@ export default function SecurityMonitoringLanding() {
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
               </Button>
               <Button
+                onClick={() => setIsOpen(true)}
                 variant="outline"
                 size="lg"
                 className="border-red-500 text-red-500 hover:bg-red-500 hover:text-white px-8 py-4 text-lg transition-all duration-300 group"
@@ -85,6 +110,36 @@ export default function SecurityMonitoringLanding() {
                 <Play className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
                 Ver Video
               </Button>
+              {isOpen && (
+                <div
+                  onClick={closeModal}
+                  className="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+                >
+                  <div className="relative w-full max-w-4xl">
+                    <button
+                      onClick={() => setIsOpen(false)}
+                      className="absolute -top-12 right-0 text-white hover:text-gray-300 transition"
+                      aria-label="Cerrar modal"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    </button>
+                    
+                    <div className="aspect-video bg-black rounded-lg overflow-hidden">
+                      <video
+                        className="w-full h-full"
+                        controls
+                        autoPlay
+                        playsInline
+                      >
+                        <source src="https://video.wixstatic.com/video/15c93a_5ee452d982524d83a4f5fbefa40d9ff7/1080p/mp4/file.mp4" type="video/mp4" />
+                        Tu navegador no soporta videos HTML5
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
           </div> 
         </div>
@@ -401,7 +456,7 @@ export default function SecurityMonitoringLanding() {
             </div>
             <p className="text-gray-400">(30 días sin compromiso - Implementación inmediata - Resultados desde el primer día)</p>
           </div>
-          <Card className="container md:w-[80%] bg-gray-900/50 border-red-900/20 backdrop-blur-sm hover:bg-gray-900/70 transition-all duration-300 shadow-2xl shadow-red-500/10 mt-12 w-full">
+          <Card ref={formRef} className="container md:w-[80%] bg-gray-900/50 border-red-900/20 backdrop-blur-sm hover:bg-gray-900/70 transition-all duration-300 shadow-2xl shadow-red-500/10 mt-12 w-full">
                 <CardContent className="p-2">
                   <form className="space-y-6">
                     <div className="space-y-2">
