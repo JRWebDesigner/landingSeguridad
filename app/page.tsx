@@ -453,7 +453,7 @@ export default function SecurityMonitoringLanding() {
             </div>
             <p className="md:text-xl text-gray-400">(30 días sin compromiso - Implementación inmediata - Resultados desde el primer día)</p>
           </div>
-          <Card className="container md:w-[80%] bg-gray-900/50 border-red-900/20 backdrop-blur-sm hover:bg-gray-900/70 transition-all duration-300 shadow-2xl shadow-red-500/10 mt-12 w-full">
+          <Card className="md:container md:w-[80%] bg-gray-900/50 border-red-900/20 backdrop-blur-sm hover:bg-gray-900/70 transition-all duration-300 shadow-2xl shadow-red-500/10 mt-12 w-full">
                 <CardContent className="">
                   <form className="space-y-6">
                     <div className="space-y-2">
