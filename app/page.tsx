@@ -67,33 +67,33 @@ export default function SecurityMonitoringLanding() {
          <img className='relative z-10 mx-auto' src="./logo.png" width='280px'/>
       <section className="relative z-10 min-h-[80%] flex items-center justify-center flex-wrap px-2 md:px-4">
 
-        <div className="x-auto text-center mt-5">
+        <div className="x-auto text-center mt-5 p-[2rem]">
           <div
-            className="transform transition-all duration-1000 ease-out"
+            className="transform transition-all duration-1000 ease-out "
             style={{ transform: `translateY(${scrollY * 0.1}px)` }}
           >
             <Badge className="mb-6 bg-red-900/20 text-red-400 border-red-500/30 animate-pulse">
               🔴 MONITOREO EN VIVO
             </Badge>
 
-            <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+            <h1 className="text-xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
               <span className="bg-gradient-to-r from-white via-red-200 to-[#ff0000] bg-clip-text text-transparent animate-gradient">
-                ¿ESTÁS SEGURO DE QUE TUS GUARDIAS <br/ > ESTÁN CUMPLIENDO SU TRABAJO?
+                ¿ESTÁS SEGURO DE QUE TUS GUARDIAS <br/ > ESTÁN CUMPLIENDO <br/> SU TRABAJO?
               </span>
               <br />
-              <span className="text-red-500 animate-pulse">¿O SIMPLEMENTE LO SUPONES?</span>
+              <span className="text-red-500 animate-pulse">¿O SIMPLEMENTE <br/> LO SUPONES?</span>
             </h1>
 
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed w-[90%] md:w-auto">
               El sistema inteligente OnPatrol, te permite controlar a tus supervisores y guardias, las rondas que realizan, registro de evidencias, incidentes, eventos o novedades, registro en los accesos o ingresos, todo esto en tiempo real, desde tu celular o una PC, sin complicaciones.
             </p>
 
             <div className="flex flex-col gap-4 justify-center items-center mb-12">
               <Button
-                size="2xl"
-                className="bg-gradient-to-r from-red-900 via-red-500 to-[#ff0000] text-white px-8 py-4 text-2xl shadow-2xl shadow-red-500/30 transition-all duration-300 transform hover:scale-105 group animate-gradient"
+                size="xl"
+                className="bg-gradient-to-r from-red-900 via-red-500 to-[#ff0000] text-white px-3 md:px-8 py-4 text-2xl shadow-2xl shadow-red-500/30 transition-all duration-300 transform hover:scale-105 group animate-gradient"
               >
-                <a className="flex gap-1 items-center" href="https://wa.link/70maca" target="blank"> <img src="./whatsapp.svg" /> Comenzar Demo Gratis
+                <a className="flex gap-1 items-center" href="https://wa.link/70maca" target="blank"> <img src="./whatsapp.svg" className="hidden md:flex"/> Comenzar Demo Gratis
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" /> </a>
               </Button>
               <Button
@@ -523,7 +523,7 @@ export default function SecurityMonitoringLanding() {
               </Card>
         </div>
       </section>
-      <footer className='relative z-10 flex justify-center items-center flex-col my-8 gap-2 text-center'>
+      <footer className='relative z-10 flex justify-center items-center flex-col my-8 gap-2 text-center p-5'>
          <img src="./logolook.png" width="100px" />
          <img src="./logob.png" width='270px' />
          <span>Dirección: Calle 1 Obrajes Edificio Torres Sur Of. TS17</span>
