@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -23,11 +23,7 @@ import {
 import Link from "next/link"
 
 export default function SecurityMonitoringLanding() {
-  const formRef = useRef(null);
 
-  const scrollToForm = () => {
-    formRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [scrollY, setScrollY] = useState(0)
 
@@ -80,26 +76,25 @@ export default function SecurityMonitoringLanding() {
               🔴 MONITOREO EN VIVO
             </Badge>
 
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+            <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
               <span className="bg-gradient-to-r from-white via-red-200 to-[#ff0000] bg-clip-text text-transparent animate-gradient">
-                Monitoreo Inteligente
+                ¿ESTÁS SEGURO DE QUE TUS GUARDIAS <br/ > ESTÁN CUMPLIENDO SU TRABAJO?
               </span>
               <br />
-              <span className="text-red-500 animate-pulse">en Tiempo Real</span>
+              <span className="text-red-500 animate-pulse">¿O SIMPLEMENTE LO SUPONES?</span>
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              El sistema inteligente OnPatrol, te permite monitorear en tiempo real, auditar recorridos, registrar accesos y responder con evidencia a cualquier incidente, todo desde tu celular o PC.
+              El sistema inteligente OnPatrol, te permite controlar a tus supervisores y guardias, las rondas que realizan, registro de evidencias, incidentes, eventos o novedades, registro en los accesos o ingresos, todo esto en tiempo real, desde tu celular o una PC, sin complicaciones.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <div className="flex flex-col gap-4 justify-center items-center mb-12">
               <Button
-                onClick={scrollToForm}
-                size="lg"
-                className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-[#ff0000] text-white px-8 py-4 text-lg shadow-2xl shadow-red-500/30 hover:shadow-red-500/50 transition-all duration-300 transform hover:scale-105 group"
+                size="2xl"
+                className="bg-gradient-to-r from-red-900 via-red-500 to-[#ff0000] text-white px-8 py-4 text-2xl shadow-2xl shadow-red-500/30 transition-all duration-300 transform hover:scale-105 group animate-gradient"
               >
-                Comenzar Demo Gratis
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+                <a className="flex gap-1 items-center" href="https://wa.link/70maca" target="blank"> <img src="./whatsapp.svg" /> Comenzar Demo Gratis
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" /> </a>
               </Button>
               <Button
                 onClick={() => setIsOpen(true)}
@@ -211,7 +206,7 @@ export default function SecurityMonitoringLanding() {
               {
                 icon: Zap,
                 title: "Alertas Instantáneas",
-                description: "Es casi frecuente tener reclamos de clientes, pero lamentablemente no tiene evidencia para responder a estos reclamos.",
+                description: "Es casi frecuente tener reclamos de clientes, pero lamentablemente no tienes evidencia para responder a estos reclamos.",
                 color: "from-red-700 to-red-900",
               },
             ].map((feature, index) => (
@@ -225,7 +220,7 @@ export default function SecurityMonitoringLanding() {
                   >
                     <feature.icon className="h-6 w-6 text-white" />
                   </div>
-                  <p className="text-gray-400 leading-relaxed">{feature.description}</p>
+                  <p className="md:text-xl text-gray-400 leading-relaxed">{feature.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -248,7 +243,7 @@ export default function SecurityMonitoringLanding() {
                   Transforma tu Seguridad
                 </span>
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="md:text-xl text-xl text-gray-300 mb-8">
                 Todo lo que necesitas para tener el control real de toda tu operación de seguridad, es una sola plataforma.
               </p>
               <div className="space-y-6">
@@ -257,7 +252,7 @@ export default function SecurityMonitoringLanding() {
                   "Dashboard para supervisores       ",
                   "Programación automática de rondas",
                   "Escaneo con evidencia (QR + multimedia)",
-                  "Indoor y Outdoor sin límites",
+                  "Control Indoor y Outdoor sin límites",
                   "Bitácoras digitales y reportes inteligentes",
                   "Control de accesos con evidencia",
                   "Todo desde la nube, sin hardware adicional",
@@ -302,7 +297,7 @@ export default function SecurityMonitoringLanding() {
               <h3 className="font-bold text-2xl">
                 Geolocalización en tiempo real
               </h3>
-              <p className="text-gray-400 leading-relaxed">
+              <p className="md:text-xl text-gray-400 leading-relaxed">
                 Puedes supervisar a tus guardias minuto a minuto visualizando recorridos exactos con GPS. Además, recibirás alertas si hay desvíos o si se saltan puntos de marcación y con ello sabrás quién está cumpliendo y quién no.
               </p>
             </div>
@@ -316,7 +311,7 @@ export default function SecurityMonitoringLanding() {
               <h3 className="font-bold text-2xl mt-8 md:text-right">
                 Dashboard para supervisores
               </h3>
-              <p className="text-gray-400 leading-relaxed text-justify md:text-right">
+              <p className="md:text-xl text-gray-400 leading-relaxed text-justify md:text-right">
                 Solo necesitas un panel visual y profesional para ver todas las rondas: rondas cumplidas, cuales están activos o cual han sido fallidos. El sistema te muestra colores que indican el estado y reportes descargables en segundos. Ya no necesitarás más hojas de Excel, no más llamadas para saber qué pasa.
               </p>
             </div>
@@ -327,7 +322,7 @@ export default function SecurityMonitoringLanding() {
               <h3 className="font-bold text-2xl">
                 Escaneo con evidencia (QR + multimedia)
               </h3>
-              <p className="text-gray-400 leading-relaxed text-justify md:text-left">
+              <p className="md:text-xl text-gray-400 leading-relaxed text-justify md:text-left">
                 Puedes verificar que el guardia ha escaneado en el lugar correcto con QR o TAG. Te permite agregar fotos, audios, firmas digitales o formularios. Cada escaneo es una prueba legal y operativa.
               </p>
             </div>
@@ -338,7 +333,7 @@ export default function SecurityMonitoringLanding() {
               <h3 className="font-bold text-2xl md:text-right">
                 Indoor y Outdoor sin límites
               </h3>
-              <p className="text-gray-400 leading-relaxed text-justify md:text-right">
+              <p className="md:text-xl text-gray-400 leading-relaxed text-justify md:text-right">
                 Puedes usar GPS para espacios exteriores. Códigos QR + IoT para interiores donde el GPS no llega. Esta solución es ideal para fábricas, hospitales, centros logísticos o edificios corporativos.
               </p>
             </div>
@@ -349,7 +344,7 @@ export default function SecurityMonitoringLanding() {
               <h3 className="font-bold text-2xl">
                 Bitácoras digitales y reportes inteligentes
               </h3>
-              <p className="text-gray-400 leading-relaxed text-justify md:text-left">
+              <p className="md:text-xl text-gray-400 leading-relaxed text-justify md:text-left">
                 Es una solución en el que todo queda registrado. Puedes filtrar por persona, zona, horario o cumplimiento. Puedes exportar evidencias con un clic. Te permite mostrar profesionalismo ante clientes y auditorías.
               </p>
             </div>
@@ -360,7 +355,7 @@ export default function SecurityMonitoringLanding() {
               <h3 className="font-bold text-2xl md:text-right">
                 Control de accesos con evidencia
               </h3>
-              <p className="text-gray-400 leading-relaxed text-justify md:text-right">
+              <p className="md:text-xl text-gray-400 leading-relaxed text-justify md:text-right">
                 Puedes registrar entradas y salidas con fotos de personas, cédulas y vehículos. Las bitácoras estarás seguras en la nube. Podrás acceder fácilmente a la información, pudiendo auditar por 3 años.
               </p>
             </div>
@@ -371,8 +366,8 @@ export default function SecurityMonitoringLanding() {
               <h3 className="font-bold text-2xl">
                 Todo desde la nube, sin hardware adicional
               </h3>
-              <p className="text-gray-400 leading-relaxed text-justify md:text-left">
-                Solo necesitarás un celular Android por guardia desde donde podrás acceder desde <br /> cualquier navegador. La implementación es sumamente rápida, lo que no frenar tu operación.
+              <p className="md:text-xl text-gray-400 leading-relaxed text-justify md:text-left">
+                Solo necesitarás un celular Android por guardia o por puesto desde donde podrás acceder desde cualquier navegador. La implementación es sumamente rápida, lo que no frenar tu operación.
               </p>
             </div>
             <img src="./mobile.png" className="md:w-[30%] shadow-xl shadow-red-500 rounded-2xl" />
@@ -420,7 +415,7 @@ export default function SecurityMonitoringLanding() {
                       <Star key={i} className="h-5 w-5 text-red-500 fill-current" />
                     ))}
                   </div>
-                  <p className="text-gray-300 mb-6 italic leading-relaxed">"{testimonial.content}"</p>
+                  <p className="md:text-xl text-gray-300 mb-6 italic leading-relaxed">"{testimonial.content}"</p>
                   <div className="border-t border-red-900/20 pt-4">
                     <div className="font-semibold text-white">{testimonial.name}</div>
                     <div className="text-red-400 text-sm">{testimonial.position}</div>
@@ -441,11 +436,12 @@ export default function SecurityMonitoringLanding() {
                 ¿Listo para Revolucionar tu Seguridad?
               </span>
             </h2>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+            <p className="md:text-xl text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
               Únete a más de 500 empresas que ya confíaron para proteger lo que más importa. ¡Está en tus manos dar el siguiente paso! La seguridad profesional empieza con decisiones inteligentes.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center md:mb-12">
+              <a href="https://wa.link/70maca">
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-[#ff0000] text-white px-12 py-6 text-sm md:text-xl shadow-2xl shadow-red-500/30 hover:shadow-red-500/50 transition-all duration-300 transform hover:scale-105 group w-[300px] md:w-auto"
@@ -453,11 +449,12 @@ export default function SecurityMonitoringLanding() {
                 QUIERO MI DEMO GRATUITA AHORA
                 <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform duration-300" />
               </Button>
+              </a>
             </div>
-            <p className="text-gray-400">(30 días sin compromiso - Implementación inmediata - Resultados desde el primer día)</p>
+            <p className="md:text-xl text-gray-400">(30 días sin compromiso - Implementación inmediata - Resultados desde el primer día)</p>
           </div>
-          <Card ref={formRef} className="container md:w-[80%] bg-gray-900/50 border-red-900/20 backdrop-blur-sm hover:bg-gray-900/70 transition-all duration-300 shadow-2xl shadow-red-500/10 mt-12 w-full">
-                <CardContent className="p-2">
+          <Card className="container md:w-[80%] bg-gray-900/50 border-red-900/20 backdrop-blur-sm hover:bg-gray-900/70 transition-all duration-300 shadow-2xl shadow-red-500/10 mt-12 w-full">
+                <CardContent className="">
                   <form className="space-y-6">
                     <div className="space-y-2">
                       <label htmlFor="name" className="text-sm font-medium text-gray-300">
@@ -526,8 +523,15 @@ export default function SecurityMonitoringLanding() {
               </Card>
         </div>
       </section>
-      <footer className='relative z-10 flex justify-center items-center flex-col my-8 gap-6 text-center'>
+      <footer className='relative z-10 flex justify-center items-center flex-col my-8 gap-2 text-center'>
+         <img src="./logolook.png" width="100px" />
          <img src="./logob.png" width='270px' />
+         <span>Dirección: Calle 1 Obrajes Edificio Torres Sur Of. TS17</span>
+         <div className="flex justify-around flex-wrap items-center gap-5">
+         <span>Teléf: +591-2-2780683 - 75363523 </span>
+         <span>Correo: <a href="mailto:info@corporacionrojo.com">info@corporacionrojo.com</a></span>
+          </div>
+         <span><a target="_blank" href="https://www.corporacionrojo.com">www.corporacionrojo.com</a></span>
          <span>Copyright © 2025 CORPORACIONROJO, Todos los derechos reservados</span>
       </footer>
     </div>
