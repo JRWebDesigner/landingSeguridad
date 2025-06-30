@@ -78,7 +78,7 @@ export default function SecurityMonitoringLanding() {
 
             <h1 className="text-xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
               <span className="bg-gradient-to-r from-white via-red-200 to-[#ff0000] bg-clip-text text-transparent animate-gradient">
-                ¿ESTÁS SEGURO DE QUE TUS GUARDIAS <br/ > ESTÁN CUMPLIENDO <br/> SU TRABAJO?
+                ¿ESTÁS SEGURO DE QUE TUS <br/ > GUARDIAS Y SUPERVISORES <br /> ESTÁN CUMPLIENDO <br/> SU TRABAJO?
               </span>
               <br />
               <span className="text-red-500 animate-pulse">¿O SIMPLEMENTE <br/> LO SUPONES?</span>
@@ -105,10 +105,37 @@ export default function SecurityMonitoringLanding() {
                 <Play className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
                 Ver Video
               </Button>
-              {isOpen && (
+            </div>
+          </div> 
+        </div>
+                      
+        {/*<img 
+            src="./mobile2.png"
+            alt='mobile app'
+            className="h-[300px] transform transition-all duration-1000 ease-out"
+            style={{ transform: `translateY(${scrollY * 0.1}px)` }}
+        /> */}
+        <img 
+            src="./mobile2.png"
+            alt='mobile app'
+           
+            className="h-[350px] md:h-auto transform transition-all duration-1000 ease-out"
+            style={{ transform: `translateY(${scrollY * 0.1}px)`}}
+        /> 
+        <div className="absolute top-20 left-10 animate-float">
+          <div className="w-4 h-4 bg-red-500 rounded-full opacity-60"></div>
+        </div>
+        <div className="absolute top-40 right-20 animate-float-delayed">
+          <div className="w-6 h-6 border-2 border-red-500 rounded-full opacity-40"></div>
+        </div>
+        <div className="absolute bottom-40 left-20 animate-float">
+          <div className="w-3 h-3 bg-red-400 rounded-full opacity-50"></div>
+        </div>
+      </section>
+{isOpen && (
                 <div
                   onClick={closeModal}
-                  className="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+                  className="fixed inset-0 bg-black/90 backdrop-blur-sm z-20 flex items-center justify-center p-4"
                 >
                   <div className="relative w-full max-w-4xl">
                     <button
@@ -135,33 +162,6 @@ export default function SecurityMonitoringLanding() {
                   </div>
                 </div>
               )}
-            </div>
-          </div> 
-        </div>
-        {/*<img 
-            src="./mobile2.png"
-            alt='mobile app'
-            className="h-[300px] transform transition-all duration-1000 ease-out"
-            style={{ transform: `translateY(${scrollY * 0.1}px)` }}
-        /> */}
-        <img 
-            src="./mobile2.png"
-            alt='mobile app'
-           
-            className="h-[350px] md:h-auto transform transition-all duration-1000 ease-out"
-            style={{ transform: `translateY(${scrollY * 0.1}px)`}}
-        /> 
-        <div className="absolute top-20 left-10 animate-float">
-          <div className="w-4 h-4 bg-red-500 rounded-full opacity-60"></div>
-        </div>
-        <div className="absolute top-40 right-20 animate-float-delayed">
-          <div className="w-6 h-6 border-2 border-red-500 rounded-full opacity-40"></div>
-        </div>
-        <div className="absolute bottom-40 left-20 animate-float">
-          <div className="w-3 h-3 bg-red-400 rounded-full opacity-50"></div>
-        </div>
-      </section>
-
       <section id="características" className="relative z-10 py-20 px-2 md:px-4">
         <div className="container mx-auto">
           <div className="text-center mb-16">
@@ -455,15 +455,15 @@ export default function SecurityMonitoringLanding() {
           </div>
           <Card className="md:container md:w-[80%] bg-gray-900/50 border-red-900/20 backdrop-blur-sm hover:bg-gray-900/70 transition-all duration-300 shadow-2xl shadow-red-500/10 mt-12 w-full">
                 <CardContent className="">
-                  <form className="space-y-6">
+                  <form className="space-y-6" action="https://formsubmit.co/info@corporacionrojo.com" method="POST">
                     <div className="space-y-2">
                       <label htmlFor="name" className="text-sm font-medium text-gray-300">
                         Nombre Completo *
                       </label>
                       <input
                         type="text"
-                        id="name"
-                        name="name"
+                        id="nomre"
+                        name="nombre"
                         required
                         className="w-full px-2 md:px-4 py-3 bg-black/50 border border-red-900/30 rounded-lg text-white placeholder-gray-500 focus:border-red-500 focus:ring-2 focus:ring-red-500/20 focus:outline-none transition-all duration-300"
                         placeholder="Ingresa tu nombre completo"
@@ -476,8 +476,8 @@ export default function SecurityMonitoringLanding() {
                       </label>
                       <input
                         type="text"
-                        id="company"
-                        name="company"
+                        id="empresa"
+                        name="empresa"
                         required
                         className="w-full px-2 md:px-4 py-3 bg-black/50 border border-red-900/30 rounded-lg text-white placeholder-gray-500 focus:border-red-500 focus:ring-2 focus:ring-red-500/20 focus:outline-none transition-all duration-300"
                         placeholder="Nombre de tu empresa"
@@ -490,8 +490,8 @@ export default function SecurityMonitoringLanding() {
                       </label>
                       <input
                         type="text"
-                        id="contact"
-                        name="contact"
+                        id="contacto"
+                        name="contacto"
                         required
                         className="w-full px-2 md:px-4 py-3 bg-black/50 border border-red-900/30 rounded-lg text-white placeholder-gray-500 focus:border-red-500 focus:ring-2 focus:ring-red-500/20 focus:outline-none transition-all duration-300"
                         placeholder="WhatsApp: +12 345 678 90 o email@empresa.com"
@@ -503,8 +503,8 @@ export default function SecurityMonitoringLanding() {
                         Mensaje (Opcional)
                       </label>
                       <textarea
-                        id="message"
-                        name="message"
+                        id="mensaje"
+                        name="mensaje"
                         rows={4}
                         className="w-full px-2 md:px-4 py-3 bg-black/50 border border-red-900/30 rounded-lg text-white placeholder-gray-500 focus:border-red-500 focus:ring-2 focus:ring-red-500/20 focus:outline-none transition-all duration-300 resize-none"
                         placeholder="Cuéntanos sobre tus necesidades específicas..."

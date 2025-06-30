@@ -15,7 +15,7 @@ export default function RootLayout({
     <html lang="es">
       <body>
         {children}
-        <a className="fixed p-3 rounded-full bg-green-500 z-20 right-4 bottom-4 shadow-xl" href='/'><img className='w-14' src="./whatsapp.svg" /></a>
+        <a className="fixed p-3 rounded-full bg-green-500 z-20 right-4 bottom-4 shadow-xl" href='https://wa.link/70maca'><img className='w-14' src="./whatsapp.svg" /></a>
       </body>
     </html>
   )
